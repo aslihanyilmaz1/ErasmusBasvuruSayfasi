@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kadir Has Üniversitesi Erasmus Programı</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="web_nav w-75 mx-auto mt-3">
+    <nav class="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="web.html">
+          <img src="indir.png" alt="Logo" width="40" height="34" class="d-inline-block align-text-top">
+          Kadir Has Üniversitesi
+        </a>
+        <div id="nav_btn">
+          <a id ="girisBtn" href="giris.html"><button type="submit" class="btn btn-warning">Giriş</button></a>
+          <a id="kaydolBtn" href="kayitolustur.html" ><button type="submit" class="btn btn-warning">Kaydol</button></a> 
+          <a id="basvuruKaydi" href="basvurukaydi.html" ><button type="submit" class="btn btn-warning" >Başvuru Kaydını Oluştur</button></a> 
+          <button id="cikisBtn" type="button" class="btn btn-dark" style="display: none;">Çıkış</button> 
+
+        </div>
+
+      </div>
+    </nav>
+
+  </header>
+
+  <!-- Gezinme Çubuğu -->
+  <nav class="navbar navbar-expand-lg w-75 mx-auto ">
+    <div class="container-fluid mx-auto">
+      <a class="navbar-brand" href="#">Hakkımızda</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown mx-3">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Erasmus Programı
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Erasmus Nedir?</a></li>
+              <li><a class="dropdown-item" href="#">Gençlik Programları</a></li>
+              <li><a class="dropdown-item" href="#">Projeler</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown mx-3">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Erasmus Hareketlilikleri
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Öğrenim Hareketliliği</a></li>
+              <li><a class="dropdown-item" href="#">Staj Hareketliliği</a></li>
+              <li><a class="dropdown-item" href="#">Ders Verme Hareketliliği</a></li>
+              <li><a class="dropdown-item" href="#">Ders Alma Hareketliliği</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown mx-3">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Koordinatörler
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Anlaşmalar Listesi</a></li>
+              <li><a class="dropdown-item" href="#">Anlaşmalar Belgeleri</a></li>
+              <li><a class="dropdown-item" href="#">Koordinatör Belgeleri</a></li>
+              <li><a class="dropdown-item" href="#">Koordinatörlerimiz</a></li>
+              <li><a class="dropdown-item" href="#">Sunumlar</a></li>
+              <li><a class="dropdown-item" href="#">Tanıtım Materyali</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown mx-3">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Vize İşlemleri
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">İspanya</a></li>
+              <li><a class="dropdown-item" href="#">İtalya</a></li>
+              <li><a class="dropdown-item" href="#">İngiltere</a></li>
+              <li><a class="dropdown-item" href="#">Litvanya</a></li>
+              <li><a class="dropdown-item" href="#">Polonya</a></li>
+              <li><a class="dropdown-item" href="#">Çek Cumhuriyeti</a></li>
+              <li><a class="dropdown-item" href="#">Almanya</a></li>
+              <li><a class="dropdown-item" href="#">Fransa</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item  mx-3">
+            <a class="nav-link " href="masraf.html" role="button"  aria-expanded="false">
+              Masrafları Hesapla
+            </a>
+            
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SLİDER -->
+
+  <div id="carouselExampleIndicators" class="carousel slide w-75 mx-auto">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="pexels-photo-1595391.webp" class="d-block w-100  " alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="pexels-photo-1438072.jpeg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="pexels-photo-3762800.webp" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <br>
+  <br>
+
+  <!-- Haber Kartlarım-->
+  <div class="d-flex">
+    <h2 class="mx-auto mb-5">HABERLER</h2>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2 g-4 w-75 mx-auto">
+    <div class="col">
+      <div class="card">
+        <img src="pexels-photo-1709003.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title1">Erasmus + Yükseköğretim Hareketlilik Proje Yönetimi Toplantısı Gerçekleşti</h5>
+         
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="pexels-photo-3183197.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title2">Erasmus Öğrenci kulübümüzün destekleriyle depremzede vatandaşlarımız için yardım
+            kampanyası düzenledik.</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="pexels-photo-2422294.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="title">Erasmus Öğrencileri Düzenlenen Oryantasyon Programıyla Birbirleriyle Kaynaştı.</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="pexels-photo-1595385.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">2022-2023 Akademik Yılı Bahar Dönemi Gelen Erasmus Öğrencilerimiz için Oryantasyon
+            Toplantısı düzenlendi.</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <img src="pexels-photo-356079.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Erasmus Hakkında Merak Ettiklerini Sor</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+
+  <div class="container-">
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top w-75 mx-auto d-flex justify-content-between">
+      <div class="col mb-4">
+        <a href="web.html" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+          <img id="footerLogo" src="indir.png"  alt="">
+        </a>
+        <p class="text-muted mx-auto" style="width:fit-content;">© 2023</p>
+      </div>
+
+      <div class="col mb-4">
+        <ul class="nav flex-column">
+          <p>Cibali Mah. Kadir Has Cad. 34083 Fatih/İSTANBUL</p>
+          <p>T:+90 212 533 65 32</p>
+          <p>F:+90212 631 91 50</p>
+          <p>danisma@khas.edu.tr</p>
+          <p>khas@hs01.kep.tr</p>
+      </div>
+
+      <div class="col mb-4">
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Kalite</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">İhaleler</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">İş Olanakları</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">KVKK Aydınlatma Metni</a></li>
+        </ul>
+      </div>
+
+
+    </footer>
+  </div>
+  <script>
+    let isLogin = sessionStorage.getItem("isLogin");
+
+    let girisBtn = document.getElementById("girisBtn");
+    let kaydolBtn = document.getElementById("kaydolBtn");
+    let cikisBtn = document.getElementById("cikisBtn");
+    let basvuru = document.getElementById("basvuruKaydi");
+
+    cikisBtn.onclick = function (){
+      sessionStorage.setItem("isLogin",false);
+      location.reload();
+    }
+
+    if(isLogin=="true"){
+      basvuru.style.display = "inline-block";
+      cikisBtn.style.display = "inline-block";
+      girisBtn.style.display = "none";
+      kaydolBtn.style.display = "none";
+
+    }else{
+      basvuru.style.display = "none";
+      cikisBtn.style.display = "none";
+      girisBtn.style.display = "inline-block";
+      kaydolBtn.style.display = "inline-block";
+      
+    }
+  </script>
+</body>
+
+</html>

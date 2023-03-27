@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masraf Hesapla</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+
+</head>
+
+
+<body>
+    <header id="nav">
+        <div
+            class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm __web-inspector-hide-shortcut__">
+            <a href="web.html">
+                <img id="logo" class="me-3" src="indir.png" alt="" width="38" height="28">
+            </a>
+            <div class="lh-1">
+                <h1 class="h6 mb-0 text-white lh-1">Bootstrap</h1>
+                <small>Since 2011</small>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container-fluid " id="yan_foto">
+        <div class="row mainrow">
+            <div class="col-4  imagecol">
+                <img class="sideimage" src="https://images.pexels.com/photos/590493/pexels-photo-590493.jpeg">
+            </div>
+            <!-- Masraf Hesapla -->
+            <div class="col-8 d-flex justify-content-center">
+                <div  class="w-50">
+                    <select name="ulke" id="ulke" class="w-100 form-select mb-2">
+                        <option value="">Ülke Seçin</option>
+                    </select>
+                    <div id = "yazimalani">
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Masraf Hesapla -->
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="container-" id="alt_logo">
+        <footer
+            class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top w-75 mx-auto d-flex justify-content-between">
+            <div class="col mb-4">
+                <a href="web.html" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+                    <img id="footerLogo" src="indir.png" alt="">
+                </a>
+                <p class="text-muted mx-auto" style="width:fit-content;">© 2023</p>
+            </div>
+
+            <div class="col mb-4">
+                <ul class="nav flex-column">
+                    <p>Cibali Mah. Kadir Has Cad. 34083 Fatih/İSTANBUL</p>
+                    <p>T:+90 212 533 65 32</p>
+                    <p>F:+90212 631 91 50</p>
+                    <p>danisma@khas.edu.tr</p>
+                    <p>khas@hs01.kep.tr</p>
+            </div>
+
+            <div class="col mb-4">
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Kalite</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">İhaleler</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">İş Olanakları</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">KVKK Aydınlatma Metni</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script>
+            const masrafTablosu = [
+                {
+                    ulke: "Fransa",
+                    kira: 656.05,
+                    fatura: 175.00,
+                    ulasim: 50.00,
+                    yemek: 300.00
+                },
+                {
+                    ulke: "Almanya",
+                    kira: 729.26,
+                    fatura: 200.00,
+                    ulasim: 70.00,
+                    yemek: 200.00
+                },
+                {
+                    ulke: "Macaristan",
+                    kira: 339.04,
+                    fatura: 150.00,
+                    ulasim: 27.25,
+                    yemek: 100.00
+                },
+                {
+                    ulke: "Litvanya",
+                    kira: 423.05,
+                    fatura: 155.00,
+                    ulasim: 29.00,
+                    yemek: 100.00
+                },
+                {
+                    ulke: "Çek Cumhuriyeti",
+                    kira: 223.05,
+                    fatura: 155.00,
+                    ulasim: 29.00,
+                    yemek: 100.00
+                }
+            ];
+            let ulke=document.getElementById("ulke");
+            let yazimAlani = document.getElementById("yazimalani");
+            window.onload=function(){
+                for(e of masrafTablosu){
+                    let option = document.createElement("option");
+                    option.text = e.ulke;
+                    option.value = JSON.stringify(e);
+                    ulke.add(option);
+                }
+              
+            }
+            ulke.onchange = function(){
+                let selected = JSON.parse(ulke.value);
+                let kira = h3olustur("kira",selected.kira);
+                let fatura = h3olustur("fatura",selected.fatura);
+                let ulasim = h3olustur("ulaşım",selected.ulasim);
+                let yemek = h3olustur("yemek",selected.yemek);
+                let Toplam = selected.kira + selected.fatura + selected.ulasim + selected.yemek;
+                let toplamh3 = h3olustur("Toplam",Toplam);
+                yazimAlani.replaceChildren()
+                yazimAlani.appendChild(kira);
+                yazimAlani.appendChild(fatura);
+                yazimAlani.appendChild(ulasim);
+                yazimAlani.appendChild(yemek);
+                yazimAlani.appendChild(toplamh3);
+            }
+
+            function h3olustur(aciklama,text){
+                let h3 = document.createElement("h3");
+                h3.appendChild( document.createTextNode( aciklama + " : " +  text) );
+                return h3;
+            }
+
+
+        </script>
+    </div>
+    <!-- FOOTER -->
+</body>
+
+
+
+
+
+
+</html>

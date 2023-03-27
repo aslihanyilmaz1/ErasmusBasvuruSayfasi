@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+   
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <header id="nav">
+        <div
+            class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm __web-inspector-hide-shortcut__">
+            <img id="logo" class="me-3" src="indir.png" onclick="window.location.href='web.html';" alt="">
+            <div class="lh-1">
+                <h1 class="h6 mb-0 text-white lh-1">Bootstrap</h1>
+                <small>Since 2011</small>
+            </div>
+        </div>
+
+    </header>
+    <div class="container-fluid ">
+        <div class="row mainrow" style="height:150vh;">
+            <div class="col-4  imagecol" style="">
+                <img class="sideimage" src="https://images.pexels.com/photos/590493/pexels-photo-590493.jpeg" style=""
+                    alt="">
+            </div>
+            <form class="form w-50">
+                <div id="birincikaydol">
+                    <div id="kaydol" class="col-8 ">
+                        <h3>KAYIT OLUŞTUR</h3>
+                        <br>
+                        <div class="mb-3">
+                            <label for="isim" class="form-label">İSİM</label>
+                            <input type="text" class="form-control" id="isim">
+                        </div>
+                        <div class="mb-3">
+                            <label for="soy_isim" class="form-label">SOY İSİM</label>
+                            <input type="text" class="form-control" id="soy_isim">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-MAİL </label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cinsiyet" class="form-label">CİNSİYET</label>
+                            <select class="form-select" aria-label="Default select example" id="cinsiyet">
+                                <option selected>Cinsiyeti Seçiniz</option>
+                                <option value="1">Kadın</option>
+                                <option value="2">Erkek</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="dogum" class="form-label">DOĞUM TARİHİ</label>
+                            <input type="date" class="form-control" id="dogum">
+                        </div>
+                        <div class="mb-3">
+                            <label for="uyruk" class="form-label">UYRUĞUNUZ</label>
+
+                            <select name="uyruk" class="form-select" id="uyruk">
+                                <option value="1">Türk</option>
+                                <option value="2">Yabancı</option>
+
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pasaport" class="form-label">PASAPORT NO</label>
+                            <input type="number" class="form-control" id="pasaport">
+                        </div>
+                        <div class="mb-3">
+                            <label for="tc" class="form-label">TC NO</label>
+                            <input type="number" class="form-control" id="tc">
+                        </div>
+                        <br>
+                        <div class="mb-3">
+                            <label for="tel" class="form-label">TELEFON NO</label>
+                            <input type="tel" pattern="/^(05)([0-9]{2})\s?([0-9]{3})\s?([0-9]{2})\s?([0-9]{2})$/"
+                                class="form-control" id="tel">
+                        </div>
+                       
+
+
+                        <button class="btn btn-outline-primary" type="button"
+                            onclick="myfunction('birincikaydol','ikincikaydol');">İleri</button>
+                    </div>
+                </div>
+
+
+                <div id="ikincikaydol" style="display: none;">
+
+                    <div class="mb-3">
+                        <label for="EngelliDurumu" class="form-label" id="engelli">ENGELLİ DURUMU</label>
+                        <select class="form-select" aria-label="Default select example" onchange="engelli();">
+                            <option selected>Engelli Durumunu Seç</option>
+                            <option value="1" id="engelivar">Var</option>
+                            <option value="2" id="engeliyok">Yok</option>
+                        </select>
+                        <textarea id="textarea" rows="5" autocomplete="on"   style="display:none;width:100%" placeholder="Engel Durumunuzu Açıklayınız"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Adres">ADRES BİLGİLERİ</label>
+                        <select class="form-select " aria-label="Default select example">
+                            <option selected>Ülke Seç</option>
+                            <option value="ulke1">Türkiye</option>
+                            <option value="ulke2">Diğer</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="il" class="form-label">İl</label>
+
+                        <input type="text" id="il" class = "form-control"/>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ilce" class="form-label">İlçe</label>
+
+                        <input type="text" id="ilce" class = "form-control"/>
+                    </div>
+                    <div class="mb-3">
+                        <label for="posta_kodu" class="form-label">Posta Kodu</label>
+                        <input type="number" class="form-control" id="posta_kodu">
+                    </div>
+                    <div class="mb-3">
+                        <label for="mahalle" class="form-label">Mahalle</label>
+                        <input type="text" class="form-control" id="mahalle">
+                    </div>
+                    <div class="mb-3">
+                        <label for="adres_aciklama" class="form-label">Adres Açıklama</label>
+                        <input type="text" class="form-control" id="adres_aciklama">
+                    </div>
+                    <button class="btn btn-outline-primary" type="button"
+                        onclick="myfunction('ikincikaydol','birincikaydol');">Geri</button>
+                    <button class="btn btn-outline-primary" type="button"
+                        onclick="myfunction('ikincikaydol','ucuncukaydol');">İleri</button>
+                </div>
+
+
+                <div id="ucuncukaydol" style="display:none;">
+
+                    <div class="mb-3">
+                        <label for=" MezuniyetDurumu" class="form-label">MEZUNİYET DURUMU</label>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="universite">Üniversite </label>
+                        <input type="text" class="form-control" id="universite">
+                    </div>
+                    <div class="mb-3">
+                        <label for="bolum_adi" class="form-label">Bölüm Adı</label>
+                        <input type="text" class="form-control" id="bolum_adi">
+                    </div>
+                    <div class="mb-3">
+                        <label for="durum" class="form-label">Durum</label>
+                        <select class="form-select " aria-label="Default select example" id="durum" onchange="ogrenciise();">
+                            <option selected>Durumunu Seç</option>
+                            <option value="durum1">Öğrenci</option>
+                            <option value="durum2">Lisans</option>
+                            <option value="durum3">Yüksek Lisans</option>
+                        </select>
+
+                    </div>
+                    <div class="mb-3" id="tarihCon">
+                        <label for="tarih" class="form-label" id="tarihlabel">Tarih</label>
+                        <input type="date" class="form-control" id="tarih">
+                    </div>
+                    <div class="mb-3">
+                        <label for="ortalama" class="form-label">Ortalama</label>
+                        <input type="number" class="form-control" id="ortalama">
+                    </div>
+
+                    <button class="btn btn-outline-primary" type="button"
+                        onclick="myfunction('ucuncukaydol','ikincikaydol');">Geri</button>
+                    <button class="btn btn-outline-primary" type="button"
+                        onclick="myfunction('ucuncukaydol','dorduncukaydol');">İleri</button>
+
+                </div>
+
+                <div id="dorduncukaydol" style="display:none;">
+
+                    <div class="mb-3">
+                        <label for=" MezuniyetDurumu" class="form-label">DOKÜMANLAR </label>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="oz_gecmis">Öz Geçmiş</label>
+                        <input type="file" class="form-control" id="oz_gecmis">
+                    </div>
+                    <div class="mb-3">
+                        <label for="niyet_mektubu" class="form-label">Niyet Mektubu</label>
+                        <input type="file" class="form-control" id="niyet_mektubu">
+                    </div>
+                    <div class="mb-3">
+                        <label for="pasaport" class="form-label">Pasaport</label>
+                        <input type="file" class="form-control" id="pasaport">
+                    </div>
+                    <div class="mb-3">
+                        <label for="ikametgah" class="form-label">İkametgah</label>
+                        <input type="file" class="form-control" id="ikametgah">
+                    </div>
+                    <div class="mb-3">
+                        <label for="diploma" class="form-label">Diploma</label>
+                        <input type="file" class="form-control" id="diploma">
+                    </div>
+                    <p id="basvuruOlusturuldu" class="text-success d-none">Başvuru Kaydınız Oluşturuldu.</p>
+                    <button class="btn btn-outline-primary" type="button"
+                        onclick="myfunction('dorduncukaydol','ucuncukaydol');">Geri</button>
+                    <button  class="btn btn-outline-primary" type="button" onclick="kaydetOnClick();">Kaydet</button>
+
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top w-75 mx-auto d-flex justify-content-between">
+          <div class="col mb-4">
+            <a href="web.html" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+              <img id="footerLogo" src="indir.png" alt="">
+            </a>
+            <p class="text-muted mx-auto" style="width:fit-content;">© 2023</p>
+          </div>
+    
+          <div class="col mb-4">
+            <ul class="nav flex-column">
+              <p>Cibali Mah. Kadir Has Cad. 34083 Fatih/İSTANBUL</p>
+              <p>T:+90 212 533 65 32</p>
+              <p>F:+90212 631 91 50</p>
+              <p>danisma@khas.edu.tr</p>
+              <p>khas@hs01.kep.tr</p>
+          </div>
+    
+          <div class="col mb-4">
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Kalite</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">İhaleler</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">İş Olanakları</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">KVKK Aydınlatma Metni</a></li>
+            </ul>
+          </div>
+    
+    
+        </footer>
+      </div>
+    <script>
+        function myfunction(a, b) {
+            let birincidiv = document.getElementById(a);
+            let ikincidiv = document.getElementById(b);
+            birincidiv.style.display = "none";
+            ikincidiv.style.display = "block";
+        }
+        function engelli(){
+            let engelivar = document.getElementById("engelivar");
+            //let engeliyok = document.getElementById("engeliyok");
+            //let textarea = document.getElementById("textarea");
+            if(engelivar.selected==true){
+                textarea.style.display = "block";
+
+            }
+            else{
+                textarea.style.display = "none";
+            }
+
+        }
+        function ogrenciise(){
+            let durum = document.getElementById("durum");
+            let tarihCon = document.getElementById("tarihCon");
+            let tarihlabel = document.getElementById("tarihlabel");
+            if(durum.value == "durum1"){
+                //tarihCon.style.display="none";
+                tarihlabel.innerText = "Tahmini mezuniyet tarihini giriniz.";
+            }
+            else{
+                //tarihCon.style.display="block";
+                tarihlabel.innerText = "Tarih";
+            }
+
+
+        }
+        
+        function kaydetOnClick(){
+            let basvuruOlusturuldu = document.getElementById("basvuruOlusturuldu");
+            basvuruOlusturuldu.classList.toggle("d-none");
+        }
+    </script>
+</body>
+
+</html>

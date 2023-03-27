@@ -1,0 +1,19 @@
+.mainrow{
+    height: 100vh;
+}
+.imagecol{
+    height: inherit;
+}
+.sideimage{
+    object-fit: cover;
+    height:inherit;
+    width: 100%;
+    object-position: 15% 100%;
+}
+#logo{
+    height: 75px;
+    width: 75px;
+}
+#footerLogo{
+    width: 100%;
+}
